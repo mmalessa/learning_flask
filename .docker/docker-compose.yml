@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+
+    app:
+        image: ${APP_IMAGE}
+        container_name: ${CONTAINER_NAME}
+        restart: on-failure
+        volumes:
+            - ../:/app/
+            - app_home:/home/developer
+        working_dir: /app
+        ports:
+            - 5000:5000
+        tty: true
+        networks:
+            devapp:
+
+
+networks:
+    devapp:
+        name: devapp
+
+volumes:
+    app_home:

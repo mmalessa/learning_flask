@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "learning-python"
+version = "0.1.0"
+description = ""
+authors = ["Marcin"]
+readme = "README.md"
+packages = [{include = "learning_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
